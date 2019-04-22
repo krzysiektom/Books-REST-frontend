@@ -65,11 +65,17 @@ $(document).ready(function () {
         })
     });
 
+    $(mainDiv).on('click', 'a#books', function () {
+        event.stopPropagation();
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        location.href = "index.html";
+    });
+
     $(mainDiv).on('click', 'a#delete', function () {
         event.stopPropagation();
         event.preventDefault();
         event.stopImmediatePropagation();
-
         makeAjaxCall('DELETE', $(this).parent().data('id'), function () {
             location.reload();
         })

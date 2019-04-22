@@ -79,6 +79,14 @@ $(document).ready(function () {
         makeAjaxCall('DELETE', $(this).parent().data('id'), function () {
             location.reload();
         })
+    });
+
+    $(mainDiv).on('click', 'a#authors', function () {
+        event.stopPropagation();
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        location.href = "authors.html";
+
     })
 
 });
