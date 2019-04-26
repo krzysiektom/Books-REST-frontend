@@ -65,7 +65,7 @@ $(document).ready(function () {
         })
     });
 
-    $(mainDiv).on('click', 'a#books', function () {
+    $(mainDiv).on('click', 'a#books a', function () {
         event.stopPropagation();
         event.preventDefault();
         event.stopImmediatePropagation();
